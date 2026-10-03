@@ -29,7 +29,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
           HEADLESS: "1"
-        run: python hotel_watch-2.py --once ${{ github.event_name == 'workflow_dispatch' && '--ping' || '' }}
+        run: python hotel_watch-2-2.py --once ${{ github.event_name == 'workflow_dispatch' && '--ping' || '' }}
       - name: Save seen list
         run: |
           git config user.name "hotel-bot"
